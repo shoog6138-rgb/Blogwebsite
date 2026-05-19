@@ -19,7 +19,7 @@ Open the `BlogWebsite` folder in PyCharm. This project includes a PyCharm run co
 If PyCharm asks for an interpreter, choose:
 
 ```text
-C:\Users\shoog\Documents\Codex\2026-05-19\files-mentioned-by-the-user-project\.venv\Scripts\python.exe
+C:\Users\shoog\Downloads\BlogWebsite_GitHub_Upload\
 ```
 
 More details are in `PYCHARM_SETUP.md`.
