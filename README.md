@@ -50,6 +50,6 @@ git init
 git add .
 git commit -m "Create Django blog website"
 git branch -M main
-git remote add origin https://github.com/shoog6138-rgb
+git remote add origin https://github.com/shoog6138-rgb/BlogWebsite
 git push -u origin main
 ```
