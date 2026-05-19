@@ -1,0 +1,30 @@
+{% extends 'master.html' %}
+
+{% block title %}Main | BlogWebsite{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <p class="eyebrow">Django Blog Project</p>
+    <h1>Welcome to BlogWebsite</h1>
+    <p>Browse users, blog posts, comments, and categories from the sample blog database.</p>
+</section>
+
+<section class="link-grid" aria-label="Website pages">
+    <a class="page-link" href="{% url 'users' %}">
+        <span>Users</span>
+        <small>View usernames and emails</small>
+    </a>
+    <a class="page-link" href="{% url 'blogs' %}">
+        <span>Blogs</span>
+        <small>Open blog titles and details</small>
+    </a>
+    <a class="page-link" href="{% url 'comments' %}">
+        <span>Comments</span>
+        <small>Read comments by blog ID</small>
+    </a>
+    <a class="page-link" href="{% url 'categories' %}">
+        <span>Categories</span>
+        <small>Explore blog topics</small>
+    </a>
+</section>
+{% endblock %}

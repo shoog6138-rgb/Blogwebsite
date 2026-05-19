@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}BlogWebsite{% endblock %}</title>
+</head>
+<body>
+    <header class="site-header">
+        <div>
+            <a class="brand" href="{% url 'main' %}">BlogWebsite</a>
+            <p class="tagline">Simple Django Blog</p>
+        </div>
+        <nav class="nav">
+            <a href="{% url 'main' %}">Main</a>
+            <a href="{% url 'users' %}">Users</a>
+            <a href="{% url 'blogs' %}">Blogs</a>
+            <a href="{% url 'comments' %}">Comments</a>
+            <a href="{% url 'categories' %}">Categories</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 BlogWebsite. Built with Django.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% extends 'master.html' %}
+
+{% block title %}{{ post.title }} | BlogWebsite{% endblock %}
+
+{% block content %}
+<article class="detail">
+    <a class="back-link" href="{% url 'blogs' %}">Back to blogs</a>
+    <h1>{{ post.title }}</h1>
+    <p class="meta">Blog ID {{ post.id }} | {{ post.category.name }} | {{ post.date_published|date:"M d, Y" }}</p>
+    <p>{{ post.content }}</p>
+</article>
+
+<section class="comments-panel">
+    <h2>Comments</h2>
+    {% for comment in comments %}
+    <div class="comment">
+        <p>{{ comment.content }}</p>
+        <small>By {{ comment.user.username }} on {{ comment.date_posted|date:"M d, Y" }}</small>
+    </div>
+    {% empty %}
+    <p>No comments for this blog post.</p>
+    {% endfor %}
+</section>
+{% endblock %}

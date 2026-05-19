@@ -1,0 +1,17 @@
+{% extends 'master.html' %}
+
+{% block title %}Blogs | BlogWebsite{% endblock %}
+
+{% block content %}
+<h1>Blogs</h1>
+<div class="post-list">
+    {% for post in posts %}
+    <article class="post-item">
+        <a href="{% url 'blogdetails' post.id %}">{{ post.title }}</a>
+        <p>{{ post.category.name }} | {{ post.date_published|date:"M d, Y" }}</p>
+    </article>
+    {% empty %}
+    <p>No blog posts found.</p>
+    {% endfor %}
+</div>
+{% endblock %}
